@@ -11,11 +11,11 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("dstubked/vulnerable_mongo")
+        app = docker.build("dstubked/docker-test")
     }
     
     stage ('Aqua Microscanner') {
-        aquaMicroscanner imageName: 'dstubked/vulnerable_mongo', notCompliesCmd: '', onDisallowed: 'ignore', outputFormat: 'html'
+        aquaMicroscanner imageName: 'dstubked/docker-test', notCompliesCmd: '', onDisallowed: 'ignore', outputFormat: 'html'
     }
     
     stage('Push image') {
