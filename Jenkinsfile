@@ -15,7 +15,7 @@ node {
     }
     
     stage ('Aqua Microscanner') {
-        aquaMicroscanner imageName: 'dstubked/docker-test', notCompliesCmd: '', onDisallowed: 'ignore', outputFormat: 'html'
+        aquaMicroscanner imageName: 'dstubked/docker-test', notCompliesCmd: '', onDisallowed: 'fail', outputFormat: 'html'
     }
     
     stage('Push image') {
