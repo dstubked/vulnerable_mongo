@@ -15,7 +15,7 @@ node {
     }
     
     stage ('Aqua Scanner') {
-        aqua customFlags: '', hideBase: false, hostedImage: '', localImage: 'dstubked/docker-test', locationType: 'local', notCompliesCmd: '', onDisallowed: 'fail', policies: '', register: false, registry: '', showNegligible: false
+        aqua customFlags: '', hideBase: false, hostedImage: '', localImage: 'dstubked/docker-test', locationType: 'local', notCompliesCmd: '', onDisallowed: 'ignore', policies: '', register: false, registry: '', showNegligible: false
     }
     
     stage('Push image') {
